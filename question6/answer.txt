@@ -1,0 +1,60 @@
+- Explain about Lifecycle in Android, iOS, React Native.
+
+# The lifecycle of Android is a state of the event that will occur alike the event of the life of an application.
+During an application processing what an event will operate and call when an application is open, run, pause close and die.
+so then we can implement an application in a proper state to reduce some mistakes and bugs that will lead to an error on an application.
+
+//##################################
+
+- How to manage environment in Android, iOS, React Native application.
+
+# Android Environment can manage by build.gradle, we can specific different package name,
+application name, version or separate resource individual.
+like in debug mode and release mode are using different url in the API.
+or different functions like free and purchase version. and manage signing certificate when release or debug app.
+by adjusting build types, productFlavor.
+
+
+//##################################
+
+- How to deploy each environment to Tester or User in Android, iOS, React Native.
+
+# build sign APK and deploy application to google play store. crate release with internal test then create a list of tester.
+with alpha releases for the team, beta release for test with the user who not in the team,
+and production release for public user.
+
+//##################################
+
+- Explain how social auth work with mobile application and API.
+
+# I have experience by using Facebook SDK and Firebase authentication service with providing an easy and secure login to implementation,
+most social authentication follows a standard of OAuth 2.0 and OpenID Connect.
+that can share information with a single sign-on concept. when sign-in then we receive a token that holds information,
+the permission of the user, when access API we need to verify that token is validated.
+if a token is valid then we can access API.
+
+//##################################
+
+- Explain about structure or architecture you ever use in mobile development.
+
+# normally when I first study the regular architecture is MVC. and then I got recommend using MVP and then MVVM.
+architecture is an important thing when an app becomes bigger and you need to work with other developers.
+good architecture helps a lot on implementation. and when the google announced Architecture Component.
+so then I learn and used the MVVM architecture component. and practice in Clean architecture too.
+I do practice myself from Udemy, Udacity to learn about architecture like MVVM, MVP, MVC, Clean architecture.
+but the decision to use which one is something maybe need to talk with a team. what is a benefit, good, bad of each architecture.
+
+
+//##################################
+
+- What is good and bad points about Native and Cross Platform application?
+
+# in my opinion, Cross-Platform is a future. I think they improve every year,
+and someday the Cross-Platform will have a performance close to a native app.
+Flutter is my interest in Cross-Platform development to be learned in the future.
+a cross-platform is write once run everywhere concept. that what a big advantage to bringing many developers love and want to try.
+but the performance still can not compare to a native app. but some apps may good choice on development.
+the bad thing is when to access native feature sometime will be a headache.
+since native is a no performance concern and can access a full device feature with ease.
+but the bad thing in native is we need to separately development on a specific platform like IOS using Swift,
+Android using Kotlin since it may take a big cost on the development process.

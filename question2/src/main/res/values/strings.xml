@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">question2</string>
+    <string name="gender">Gender</string>
+    <string name="select_gender">Select Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="first_name_label">First Name:</string>
+    <string name="last_name_label">Last Name:</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email_label">Email:</string>
+    <string name="email">Email</string>
+    <string name="invalid_firstname">First Name Must Not Be Null</string>
+    <string name="invalid_lastname">Last Name Must Not Be Null</string>
+    <string name="invalid_email_pattern">Wrong Email Pattern</string>
+    <string name="valid_user">Success</string>
+    <string name="name">Name</string>
+    <string name="invalid_firstname_lastname_email">Please Input Your First Name, Last Name and Email</string>
+    <string name="invalid_firstname_lastname">Please Input Your First Name And Last Name</string>
+    <string name="page2">Page 2</string>
+    <string name="page1">Page 1</string>
+</resources>

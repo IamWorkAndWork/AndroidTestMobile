@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/margin_default"
+    android:orientation="vertical"
+    tools:context=".page2.Page2Activity">
+
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/simpleTableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1"> <!-- stretch the second column of the layout-->
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/page2TxtGenderLabel"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_marginLeft="10dp"
+                android:text="@string/gender"
+                android:textAppearance="@style/txtLabel"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/page2TxtGender"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_marginLeft="10dp"
+                android:padding="5dp"
+                android:textColor="#000"
+                tools:text="@string/app_name" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_section">
+
+
+            <TextView
+                android:id="@+id/page2TxtNameLabel"
+                android:layout_column="0"
+                android:layout_marginLeft="10dp"
+                android:text="@string/name"
+                android:textAppearance="@style/txtLabel"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/page2TxtName"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_marginLeft="10dp"
+                android:padding="5dp"
+                android:textColor="#000"
+                tools:text="@string/name" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_section">
+
+
+            <TextView
+                android:id="@+id/page2TxtEmailLabel"
+                android:layout_column="0"
+                android:layout_marginLeft="10dp"
+                android:text="@string/email"
+                android:textAppearance="@style/txtLabel"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/page2Email"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_marginLeft="10dp"
+                android:padding="5dp"
+                android:textColor="#000"
+                tools:text="@string/email" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">question3</string>
+    <string name="error_loading_api">Error Loading API</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="price_item">price: %s ฿</string>
+    <string name="page_1">Page #1</string>
+    <string name="page_2">Page #2</string>
+
+</resources>

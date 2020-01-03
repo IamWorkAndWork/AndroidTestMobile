@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">question5</string>
+
+    <string name="date_of_birth">Date Of Birth</string>
+    <string name="update">Update</string>
+    <string name="delete_user_success">Delete User Success</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="promp_title_user_action">User Action?</string>
+    <string name="invalid_input">Please Check Your First Name, Last Name, Date Of Birth</string>
+    <string name="add_user_success">Add User Success</string>
+    <string name="add_user_failed">Add User Failed</string>
+    <string name="delete_user_failed">Delete User Failed</string>
+    <string name="update_user_success">Update User Success</string>
+    <string name="update_user_failed">Update User Failed</string>
+    <string name="add">Add</string>
+    <string name="cancel">Cancel</string>
+    <string name="title_activity_page2">Page #2</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="next">Next</string>
+    <string name="invalid_no_users">Please Add User More Than 1 Person</string>
+    <string name="remove">Remove</string>
+    <string name="page1">Page #1</string>
+    <string name="page2">Page #2</string>
+</resources>

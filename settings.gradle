@@ -1,0 +1,2 @@
+include ':question1', ':question2', ':question3', ':question5'
+rootProject.name='TestMobile'
