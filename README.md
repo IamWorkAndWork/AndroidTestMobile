@@ -23,17 +23,19 @@ an Android Application Test
 - to run the project of each question just change to the prefer module name.
 - select prefer module question and then press run
 
-![Step 1](https://github.com/IamWorkAndWork/TestMobile/blob/master/1.png)
-
-![Step 2](https://github.com/IamWorkAndWork/TestMobile/blob/master/2.png)
-
-![Step 3](https://github.com/IamWorkAndWork/TestMobile/blob/master/3.png)
-
 #### Question6 Answer
 - change project view to "Project"
 - an answer is inside the question6 directory > answer.txt
 
-![Step 1](https://github.com/IamWorkAndWork/TestMobile/blob/master/5.png)
 
-![Step 2](https://github.com/IamWorkAndWork/TestMobile/blob/master/4.png)
+
+![Step 1](https://github.com/IamWorkAndWork/TestMobile/blob/master/1.png)
+
+![Step 2](https://github.com/IamWorkAndWork/TestMobile/blob/master/5.png)
+
+![Step 3](https://github.com/IamWorkAndWork/TestMobile/blob/master/2.png)
+
+![Step 4](https://github.com/IamWorkAndWork/TestMobile/blob/master/3.png)
+
+![Step 5](https://github.com/IamWorkAndWork/TestMobile/blob/master/4.png)
 
