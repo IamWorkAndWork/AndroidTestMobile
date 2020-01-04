@@ -4,6 +4,7 @@ import android.app.DatePickerDialog
 import android.app.DatePickerDialog.OnDateSetListener
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -33,6 +34,8 @@ class Page1Fragment : Fragment(), Page1Adapter.onPage1AdapterListener {
 
         fun newInstance() = Page1Fragment()
     }
+
+    val TAG by lazy { javaClass.simpleName }
 
     private lateinit var viewModel: Page1ViewModel
     private lateinit var mAdapter: Page1Adapter
@@ -112,7 +115,7 @@ class Page1Fragment : Fragment(), Page1Adapter.onPage1AdapterListener {
 
                     val dbDate = DateUtils.stringToDBFormat(date)
 
-//                    Log.e("print", "date select = " + date + " | " + dbDate)
+                    Log.e(TAG, "date select = " + date + " | " + dbDate)
 
                     viewModel.updateBirthDate(dbDate)
                     btDate.text = DateUtils.dateDBToAppFormat(dbDate)
@@ -334,7 +337,7 @@ class Page1Fragment : Fragment(), Page1Adapter.onPage1AdapterListener {
 //
 //        btDeleteuser.setOnClickListener {
 //            val users = viewModel.getAllUser()
-////            Log.e("print", "btDeleteuser get user = " + users.toString())
+////            Log.e(TAG, "btDeleteuser get user = " + users.toString())
 //            viewModel.deleteUser(users?.get(0))
 //
 //        }

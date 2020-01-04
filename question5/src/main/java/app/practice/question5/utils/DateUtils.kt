@@ -6,7 +6,7 @@ import java.util.*
 object DateUtils {
 
     private val formatYMD = SimpleDateFormat("yyyy-MM-dd")
-    private val formatApp = SimpleDateFormat("D MMM yyyy")
+    private val formatApp = SimpleDateFormat("d MMM yyyy")
 
     fun stringToDate(date: String): Date? {
 //        val mDateTime = formatYMD.parse(date)//getDateTimeFormat(dbFormat, context)?.parse(dateStr);

@@ -3,10 +3,7 @@ package app.practice.question5.presentation.Page1
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.*
 import app.practice.question5.base.BaseViewModel
 import app.practice.question5.domain.Page1UseCase
 import app.practice.question5.domain.User
@@ -15,6 +12,9 @@ import kotlinx.coroutines.*
 class Page1ViewModel(private val usecase: Page1UseCase) :
     BaseViewModel() {
 
+    val TAG by lazy {
+        javaClass.simpleName
+    }
     private val _users = MutableLiveData<List<User>>()
     private val _loading = MutableLiveData<Boolean>()
     private val _actionType = MutableLiveData<Int>().apply {
@@ -64,15 +64,24 @@ class Page1ViewModel(private val usecase: Page1UseCase) :
 
     fun addUser(onSuccess: (Boolean) -> Unit) {
         _loading.value = true
-        launch {
+
+        viewModelScope.launch {
+            
             try {
                 val addUserStatus = user?.let { usecase.addUser(it) }
-                Log.e("print", "user add success= " + addUserStatus)
-                onSuccess(true)
+                Log.d(TAG, "user add success= " + addUserStatus)
+
+                withContext(Dispatchers.Main) {
+                    onSuccess(true)
+                }
+
 
             } catch (e: Exception) {
-                Log.e("print", "user add error = " + e)
-                onSuccess(false)
+                Log.e(TAG, "user add error = " + e)
+
+                withContext(Dispatchers.Main) {
+                    onSuccess(false)
+                }
 
             }
 
@@ -90,9 +99,9 @@ class Page1ViewModel(private val usecase: Page1UseCase) :
         try {
             users = usecase.getAllUsers()
             _users.postValue(users)
-            Log.e("print", "getAllUser success = " + users)
+            Log.d(TAG, "getAllUser success = " + users)
         } catch (e: java.lang.Exception) {
-            Log.e("print", "getAllUser error = " + e)
+            Log.e(TAG, "getAllUser error = " + e)
         }
 
         _loading.postValue(false)
@@ -105,18 +114,22 @@ class Page1ViewModel(private val usecase: Page1UseCase) :
     fun deleteUser(user: User, onSuccess: (Boolean) -> Unit) {
         _loading.value = true
 
-        launch {
+        viewModelScope.launch {
             try {
                 val res = async {
                     usecase?.deleteUser(user)
                 }.await()
 
-                Log.e("print", "deleteUser success = " + res)
-                onSuccess(true)
+                Log.d(TAG, "deleteUser success = " + res)
+                withContext(Dispatchers.Main) {
+                    onSuccess(true)
+                }
 
             } catch (e: java.lang.Exception) {
-                Log.e("print", "deleteUser error = " + e)
-                onSuccess(false)
+                Log.e(TAG, "deleteUser error = " + e)
+                withContext(Dispatchers.Main) {
+                    onSuccess(false)
+                }
 
             }
 
@@ -132,19 +145,23 @@ class Page1ViewModel(private val usecase: Page1UseCase) :
 
         _loading.value = true
 
-        GlobalScope.launch {
+        viewModelScope.launch {
 
             try {
                 val res = withContext(Dispatchers.IO) {
                     user?.let { usecase?.updateUser(it) }
                 }
 
-                Log.e("print", "updateUser success = " + res + " | " + user.toString())
-//                onSuccess(true)
+                Log.d(TAG, "updateUser success = " + res + " | " + user.toString())
+                withContext(Dispatchers.Main) {
+                    onSuccess(true)
+                }
 
             } catch (e: java.lang.Exception) {
-                Log.e("print", "updateUser error = " + e)
-//                onSuccess(false)
+                Log.e(TAG, "updateUser error = " + e)
+                withContext(Dispatchers.Main) {
+                    onSuccess(false)
+                }
 
             }
 
@@ -152,8 +169,6 @@ class Page1ViewModel(private val usecase: Page1UseCase) :
 
             fetchAllUser()
         }
-
-        onSuccess(true)
 
     }
 
@@ -169,14 +184,8 @@ class Page1ViewModel(private val usecase: Page1UseCase) :
     }
 
     fun setActionType(ACTION_TYPE: Int) {
-//        this.ACTION_TYPE = ACTION_TYPE
         this._actionType.value = ACTION_TYPE
     }
-
-//    fun getActionType(): Int {
-//        return ACTION_TYPE
-//
-//    }
 
     class Factory(private val usecase: Page1UseCase) : ViewModelProvider.Factory {
         override fun <T : ViewModel?> create(modelClass: Class<T>): T {

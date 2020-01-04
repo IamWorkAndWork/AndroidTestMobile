@@ -1,6 +1,5 @@
 package app.practice.question5.presentation.Page2
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -28,9 +27,9 @@ class Page2ViewModel(private val usecase: Page2UseCase) : BaseViewModel() {
         try {
             users = usecase.getAllUsers()
             _users.postValue(users)
-            Log.e("print", "getAllUser success = " + users)
+//            Log.e("print", "getAllUser success = " + users)
         } catch (e: Exception) {
-            Log.e("print", "getAllUser error = " + e)
+//            Log.e("print", "getAllUser error = " + e)
         }
 
         _loading.postValue(false)
@@ -49,11 +48,11 @@ class Page2ViewModel(private val usecase: Page2UseCase) : BaseViewModel() {
                     usecase?.deleteUser(user)
                 }.await()
 
-                Log.e("print", "deleteUser success = " + res)
+//                Log.e("print", "deleteUser success = " + res)
                 onSuccess(true)
 
             } catch (e: java.lang.Exception) {
-                Log.e("print", "deleteUser error = " + e)
+//                Log.e("print", "deleteUser error = " + e)
                 onSuccess(false)
 
             }
