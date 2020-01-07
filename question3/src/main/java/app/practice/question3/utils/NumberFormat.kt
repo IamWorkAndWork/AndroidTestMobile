@@ -7,7 +7,7 @@ val decFormat = DecimalFormat("#.#")
 
 fun String?.toDecimalFormat(): String {
     try {
-        val number = this?.toInt()
+        val number = this?.toFloat()
         return decFormat.format(number)
 
     } catch (e: Exception) {
